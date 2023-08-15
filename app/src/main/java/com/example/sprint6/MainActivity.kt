@@ -7,7 +7,7 @@ import android.os.Bundle
 [x] Permiso de internet y clear traffic (o algo así) en Manifest
 [x] ViewBinding
 [x] Dependencias: Coil, Room, Retrofit, navigation, viewModel y Test de android. Agregar el plugin de ROOM y cambiar la versión de la 1.8 a la 17
-[ ] Crear package data, data.local, data.remote y presentation(o vistas)
+[x] Crear package data, data.local, data.remote y presentation(o vistas)
 [ ] Remoto:
     [ ] Dataclass/ POJO
     [ ] API (interfaz)
