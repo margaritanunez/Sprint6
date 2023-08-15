@@ -8,10 +8,10 @@ import android.os.Bundle
 [x] ViewBinding
 [x] Dependencias: Coil, Room, Retrofit, navigation, viewModel y Test de android. Agregar el plugin de ROOM y cambiar la versión de la 1.8 a la 17
 [x] Crear package data, data.local, data.remote y presentation(o vistas)
-[ ] Remoto:
-    [ ] Dataclass/ POJO
-    [ ] API (interfaz)
-    [ ] Cliente de Retrofit
+[x] Remoto:
+    [x] Dataclass/ POJO
+    [x] API (interfaz)
+    [x] Cliente de Retrofit
 [ ] Repositorio
 [ ] Local:
     [ ] Entity
