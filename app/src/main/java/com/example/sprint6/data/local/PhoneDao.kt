@@ -17,6 +17,6 @@ interface PhoneDao {
     fun getPhones(): LiveData<List<PhoneEntity>>
 
     @Query ("SELECT * FROM tabla_telefonos WHERE id = :id ")
-    fun getTerreno(id:String): LiveData<PhoneEntity>
+    fun getPhone(id:String): LiveData<PhoneEntity>
     // para obtener un elemento dado su id.
 }

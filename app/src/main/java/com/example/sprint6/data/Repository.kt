@@ -20,7 +20,8 @@ class Repository (private val phoneApi: PhoneApi, private val phoneDao: PhoneDao
                 
             }
         }
-        //
+        fun getPhone(id: String): LiveData<PhoneEntity> = phoneDao.getPhone(id)
+        //devuelve un solo terreno. el nombre de la fx debe ser igual al que se encuentra en dao
 
     }
 
