@@ -11,7 +11,7 @@ import com.example.sprint6.databinding.FragmentListBinding
 
 class ListFragment : Fragment() {
     private lateinit var binding: FragmentListBinding
-    private var phoneViewModel: PhoneViewModel by activityViewModels()
+    private val phoneViewModel: PhoneViewModel by activityViewModels()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
