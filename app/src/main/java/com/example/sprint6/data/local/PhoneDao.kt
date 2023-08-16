@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import com.example.sprint6.data.remote.PhoneDetail
 
 interface PhoneDao {
 
@@ -11,12 +12,12 @@ interface PhoneDao {
     suspend fun insertPhone(phoneEntity: List<PhoneEntity>)
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertPhones (phonesEntity: List<PhoneEntity>)
+    suspend fun insertDetailPhones (detailPhoneEntity: List<PhoneDetail>)
 
     @Query("select * from tabla_telefonos order by id ASC")
     fun getPhones(): LiveData<List<PhoneEntity>>
 
-    @Query ("SELECT * FROM tabla_telefonos WHERE id = :id ")
-    fun getPhone(id:String): LiveData<PhoneEntity>
-    // para obtener un elemento dado su id.
+    @Query ("SELECT * FROM tabla_detalle_telefonos WHERE id = :id ")
+    fun getPhoneDetail(id:Int): LiveData<List<DetailPhoneEntity>>
+    // para obtener un elemento dado su id. detalle
 }
