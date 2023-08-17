@@ -9,5 +9,5 @@ interface PhoneApi {
     suspend fun getData() : Response<List<Phone>>
 
     @GET("details/{id}")
-    suspend fun getDetailPhone(@Path("id")id:Int): Response<List<PhoneDetail>>
+    suspend fun getDetailPhone(@Path("id")id:Int): Response<PhoneDetail>
 }

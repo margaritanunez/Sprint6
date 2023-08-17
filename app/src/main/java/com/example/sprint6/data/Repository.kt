@@ -41,7 +41,7 @@ class Repository (private val phoneApi: PhoneApi, private val phoneDao: PhoneDao
             if (responseDetail.isSuccessful){
                 val respDetail = responseDetail.body()
                 respDetail?.let { phonesDetail->
-                    val detailsPhoneEntity = phonesDetail.map { it.transformarDetalle()}
+                    val detailsPhoneEntity = phonesDetail.transformarDetalle()
                     phoneDao.insertDetailPhones(detailsPhoneEntity)
                 }
             }else{
