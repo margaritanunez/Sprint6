@@ -32,7 +32,7 @@ class Repository (private val phoneApi: PhoneApi, private val phoneDao: PhoneDao
             val respDetail = responseDetail.body()
             respDetail?.let { phonesDetail->
                 val detailsPhoneEntity = phonesDetail.map { it.transformarDetalle()}
-                phoneDao.insertDetailPhones(phonesDetail)
+                phoneDao.insertDetailPhones(detailsPhoneEntity)
             }
         }
 
