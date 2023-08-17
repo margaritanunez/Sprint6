@@ -11,7 +11,7 @@ import com.example.sprint6.data.remote.PhoneDetail
 class Repository (private val phoneApi: PhoneApi, private val phoneDao: PhoneDao){
 
     fun getPhones() : LiveData<List<PhoneEntity>> = phoneDao.getPhones()
-    fun getPhoneDetail(id: Int): LiveData<List<DetailPhoneEntity>> = phoneDao.getPhoneDetail(id)
+    fun getPhoneDetail(id: Int): LiveData<DetailPhoneEntity> = phoneDao.getPhoneDetail(id)
 
     suspend fun chargePhones(){
         val response = phoneApi.getData()

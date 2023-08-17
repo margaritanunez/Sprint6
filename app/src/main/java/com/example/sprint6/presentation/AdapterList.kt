@@ -42,7 +42,7 @@ class AdapterList: RecyclerView.Adapter<AdapterList.ItemListViewHolder>() {
 
             phoneBinding.cvPhone.setOnClickListener {
                 val bundle = Bundle()
-                bundle.putString("id", smartphone.id.toString())
+                bundle.putInt("id", smartphone.id)
                 Navigation.findNavController(phoneBinding.root).navigate(R.id.action_listFragment_to_detailFragment, bundle)
             }
 
