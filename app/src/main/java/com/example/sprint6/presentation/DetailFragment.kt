@@ -1,5 +1,7 @@
 package com.example.sprint6.presentation
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -47,6 +49,22 @@ class DetailFragment : Fragment() {
             }
 
         }
+        binding.btnCorreo.setOnClickListener {
+            val destinatario= "info@navaera.cl"
+            val emailIntent = Intent(Intent.ACTION_SENDTO)
+            val textoEmail = "Hola: \n Vi este teléfono y me gustaría que me contactaran a este  \n correo o al siguiente número:  \n Quedo atento."
+            binding.mensajetxt.setText(textoEmail)
+
+
+            emailIntent.type = "text/plain"
+            emailIntent.data = Uri.parse("mailto:")
+            emailIntent.putExtra(Intent.EXTRA_EMAIL, destinatario)
+            emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Asunto del correo")
+            emailIntent.putExtra(Intent.EXTRA_TEXT, binding.mensajetxt.text)
+
+            startActivity(Intent.createChooser(emailIntent, "Consultar por producto..."))
+        }
+
         return binding.root
 
     }
