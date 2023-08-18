@@ -36,8 +36,10 @@ class Repository (private val phoneApi: PhoneApi, private val phoneDao: PhoneDao
     }
 
     suspend fun chargeDetailPhones(id:Int){
+        Log.d("repository", id.toString())
         try {
             val responseDetail = phoneApi.getDetailPhone(id)
+            Log.d("repository", responseDetail.isSuccessful.toString())
             if (responseDetail.isSuccessful){
                 val respDetail = responseDetail.body()
                 respDetail?.let { phonesDetail->
