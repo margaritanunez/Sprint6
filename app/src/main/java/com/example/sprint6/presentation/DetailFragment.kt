@@ -36,6 +36,7 @@ class DetailFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentDetailBinding.inflate(layoutInflater, container, false)
+        phoneViewModel.getDetailPhoneViewModel(param1)
         Log.d("detail", "param1=$param1")
         phoneViewModel.detailLiveData(param1).observe(viewLifecycleOwner) {
             if (it != null) {

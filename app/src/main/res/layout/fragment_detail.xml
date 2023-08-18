@@ -8,9 +8,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvNombreFotoPrecio"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="412dp"
+        android:layout_height="308dp"
         android:backgroundTint="@color/ligth_primary_color"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -20,10 +21,11 @@
 
             <TextView
                 android:id="@+id/tvNombreDetalle"
-                android:layout_width="406dp"
-                android:layout_height="53dp"
+                android:layout_width="398dp"
+                android:layout_height="93dp"
                 android:background="@color/divider_color"
                 android:foregroundGravity="center_vertical|center"
+                android:gravity="center"
                 android:text="Nombre"
                 android:textColor="@color/primary_text"
                 android:textSize="34sp"
@@ -53,8 +55,8 @@
 
             <TextView
                 android:id="@+id/tvCredito"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="144dp"
+                android:layout_height="69dp"
                 android:text="Acepta crédito"
                 android:textColor="@color/primary_text"
                 android:textSize="20sp"
@@ -79,8 +81,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvDescripcion"
-        android:layout_width="403dp"
-        android:layout_height="82dp"
+        android:layout_width="399dp"
+        android:layout_height="137dp"
         android:backgroundTint="@color/divider_color"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,8 +106,8 @@
 
             <TextView
                 android:id="@+id/tvDescripcionDetalle"
-                android:layout_width="400dp"
-                android:layout_height="55dp"
+                android:layout_width="391dp"
+                android:layout_height="93dp"
                 android:gravity="center"
                 android:text="Descripción"
                 android:textColor="@color/secondary_text"
@@ -135,6 +137,7 @@
         android:layout_width="231dp"
         android:layout_height="150dp"
         android:ems="10"
+        android:hint="Escriba su mensaje"
         android:text="Escriba su mensaje"
         app:layout_constraintBottom_toTopOf="@+id/btnCorreo"
         app:layout_constraintEnd_toEndOf="parent"
